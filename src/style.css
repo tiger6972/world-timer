@@ -1,12 +1,13 @@
 body {
-  background-color: rgba(152, 245, 225, 0.6);
+  background-color: rgba(152, 245, 225, 0.4);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
   text-align: center;
-  color: #1b9aa5;
-  size: 24px;
+  color: #f15bb5;
+  font-size: 42px;
+  margin: 0 0 50px;
 }
 
 h2 {
