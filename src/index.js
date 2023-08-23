@@ -5,7 +5,9 @@ function updateTime() {
   let losAngelesTimeElement = losAngelesElement.querySelector(".time");
   let losAngelesTime = moment().tz(`America/Los_Angeles`);
 
-  losAngelesDateElement.innerHTML = moment().format("DD MMMM YYYY");
+  losAngelesDateElement.innerHTML = moment()
+    .tz(`America/Los_Angeles`)
+    .format("DD MMMM YYYY");
   losAngelesTimeElement.innerHTML = `${losAngelesTime.format(`HH:mm:ss`)}`;
 
   //Paris
@@ -15,7 +17,9 @@ function updateTime() {
   let parisTimeElement = parisElement.querySelector(".time");
   let parisTime = moment().tz(`Europe/Paris`);
 
-  parisDateElement.innerHTML = moment().format("DD MMMM YYYY");
+  parisDateElement.innerHTML = moment()
+    .tz(`Europe/Paris`)
+    .format("DD MMMM YYYY");
   parisTimeElement.innerHTML = `${parisTime.format(`HH:mm:ss`)}`;
 
   //Shanghai
