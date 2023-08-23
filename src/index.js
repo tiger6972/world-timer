@@ -17,6 +17,18 @@ function updateTime() {
 
   parisDateElement.innerHTML = moment().format("DD MMMM YYYY");
   parisTimeElement.innerHTML = `${parisTime.format(`HH:mm:ss`)}`;
+
+  //Shanghai
+
+  let shanghaiElement = document.querySelector("#shanghai");
+  let shanghaiDateElement = shanghaiElement.querySelector(".date");
+  let shanghaiTimeElement = shanghaiElement.querySelector(".time");
+  let shanghaiTime = moment().tz(`Asia/Shanghai`);
+
+  shanghaiDateElement.innerHTML = moment()
+    .tz(`Asia/Shanghai`)
+    .format("DD MMMM YYYY");
+  shanghaiTimeElement.innerHTML = `${shanghaiTime.format(`HH:mm:ss`)}`;
 }
 
 function updateCity(event) {
@@ -35,6 +47,7 @@ function updateCity(event) {
           </div>
           <div class="time">${cityTime.format("HH:mm:ss")}</div>
         </div>  
+        <a href="https://courageous-stardust-d40305.netlify.app/">Go Back</a>
   `;
 }
 
